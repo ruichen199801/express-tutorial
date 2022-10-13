@@ -4,6 +4,8 @@ Express video tutorials created by *Anson the Developer* on [YouTube](https://ww
 
 [2022 Playlist](https://www.youtube.com/playlist?list=PL_cUvD4qzbkwp6pxx27pqgohrsP8v1Wj2) featuring MongoDB, Mongoosh, Session MongoStore.
 
+[GitHub Code](https://github.com/stuyy/expressjs-tutorial/tree/1df72f5e4f1717b803482600adf048ab9e743a5d)
+
 ### Project Setup
 
 1. Initialize package.json file: `npm init -y`
