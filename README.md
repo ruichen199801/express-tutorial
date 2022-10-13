@@ -9,9 +9,9 @@ Express video tutorials created by *Anson the Developer* on [YouTube](https://ww
 1. Initialize package.json file: `npm init -y`
 2. Install express: `npm i express`
 3. Start backend server: 
-  * `node app.js`
-  * `nodemon app.js` (`npm i nodemon` first) 
-  * add `"start": "nodemon app"` in package.json scripts, then run `npm start`
+    * `node app.js`
+    * `nodemon app.js` (`npm i nodemon` first) 
+    * add `"start": "nodemon app"` in package.json scripts, then run `npm start`
 
 ### MySQL Setup
 
@@ -31,33 +31,32 @@ Express video tutorials created by *Anson the Developer* on [YouTube](https://ww
 
 * [Postman Collection Link](https://www.getpostman.com/collections/bbf291a26bd7a5b6660d)
 * Test Login:
-  1. Create db schema in local MySQL, and use `user-mysql` POST method to add the user object to db
-  2. Test `login-passportJS` POST method, expect 200 response and a cookie generated, see the session stored in local memory printed in terminal
-  3. Change password or username in request body and test again, expected 401 unauthorized
-  4. Test the protected route `user-mysql` GET, expect 200 if user is logged in, otherwise 403
-  5. Note: restart server / session expire will require auth again
+    1. Create db schema in local MySQL, and use `user-mysql` POST method to add the user object to db
+    2. Test `login-passportJS` POST method, expect 200 response and a cookie generated, see the session stored in local memory printed in terminal
+    3. Change password or username in request body and test again, expected 401 unauthorized
+    4. Test the protected route `user-mysql` GET, expect 200 if user is logged in, otherwise 403
+    5. Note: restart server / session expire will require auth again
 
 ### Notes
 1. Extract middleware functions to middleware.js, call next() for customized middlewares. Always define middlewares before routes
 2. Export route not route()
 3. req properties:
-  * `req.params`: route parameter (localhost:3000/user/jack, jack is a route param)
-  * `req.query`: query parameter (localhost:3000/user?username=jack, jack is a query param)
-  * use destructuring syntax to extract data: `const { title } = req.query;`
+    * `req.params`: route parameter (localhost:3000/user/jack, jack is a route param)
+    * `req.query`: query parameter (localhost:3000/user?username=jack, jack is a query param)
+    * use destructuring syntax to extract data: `const { title } = req.query;`
 4. 401 Unauthorized is the status code to return when the client provides no credentials or invalid credentials. 403 Forbidden is the status code to return when a client has valid credentials but not enough privileges to perform an action on a resource.
 5. How cookies work in login:
-  * User enters username and password in frontend, click login button
-  * A request sent to server, server generates unique session ID and send back to client
-  * Client stores the cookie, and every subsequent request made to server will send the HTTP cookie in req headers
-  * The server receives request, middleware functions parse cookies, and check on server side which user this cookie belongs to
-  * Server then sends back a response after performing business logic
+    * User enters username and password in frontend, click login button
+    * A request sent to server, server generates unique session ID and send back to client
+    * Client stores the cookie, and every subsequent request made to server will send the HTTP cookie in req headers
+    * The server receives request, middleware functions parse cookies, and check on server side which user this cookie belongs to
+    * Server then sends back a response after performing business logic
 
 ### Links
 1. [express-session params](https://stackoverflow.com/questions/40381401/when-to-use-saveuninitialized-and-resave-in-express-session)
 2. [Use express-session in React](https://stackoverflow.com/questions/62375329/display-express-session-data-in-react)
 3. [express-session with PassportJS](https://www.passportjs.org/concepts/authentication/sessions/)
 
-<br>
 *Ruichen Zhang*
 
 Oct 13, 2022
