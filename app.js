@@ -19,7 +19,7 @@ app.use(session({
     resave: false,
     cookie: { maxAge: 60000 },
     saveUninitialized: false, // otherwise generate a new session id every time
-    store // same as store: storede
+    store // same as store: store
 }));
 
 app.use(express.json());
