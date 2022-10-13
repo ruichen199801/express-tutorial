@@ -26,8 +26,8 @@ Express video tutorials created by *Anson the Developer* on [YouTube](https://ww
 7. `CREATE TABLE USERS (username VARCHAR(255), password VARCHAR(255));`
 8. `SHOW TABLES;`
 9. `DESCRIBE USERS;`
-10. select * from users;
-11. DELETE from users;
+10. `select * from users;`
+11. `DELETE from users;`
 
 ### Test Suite
 
